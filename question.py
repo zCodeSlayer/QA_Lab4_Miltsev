@@ -10,3 +10,4 @@ class Question(object):
         print("Выберете ответ:")
         for answer in self.answers_list:
             print(str(count) + ".", answer)
+            count += 1
