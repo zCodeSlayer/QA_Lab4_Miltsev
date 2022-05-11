@@ -17,6 +17,6 @@ class Test_Game_Process(unittest.TestCase):
         self.assertEqual(new_bank, 2000)
 
     def test_is_answer_right(self):
-        result = is_answer_right(Question(('1234',
-                    ['1', '2', '3', '4'], 1)), 1)
+        result = is_answer_right(Question('1234',
+                    ['1', '2', '3', '4'], 1), 1)
         self.assertEqual(result, True)
