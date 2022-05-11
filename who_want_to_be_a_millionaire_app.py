@@ -1,1 +1,3 @@
-print("разрабатываем по tdd")
+def up_bank(old_bank):
+    return 500
+
