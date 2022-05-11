@@ -1,7 +1,7 @@
 import unittest
 from hints_controll import Hints
 from question import Question
-from who_want_to_be_a_millionaire_app import up_bank, is_answer_right
+from who_want_to_be_a_millionaire_app import up_bank, is_answer_right, is_hints_available
 
 class Test_Game_Process(unittest.TestCase):
     def test_bank(self):
@@ -25,3 +25,8 @@ class Test_Game_Process(unittest.TestCase):
         result = is_answer_right(Question('1234',
                     ['1', '2', '3', '4'], 1), 3)
         self.assertEqual(result, False)
+
+    def test_is_hints_available(self):
+        hints = Hints()
+        result = is_hints_available(hints)
+        self.assertEqual(result, True)
