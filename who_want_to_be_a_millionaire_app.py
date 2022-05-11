@@ -5,4 +5,7 @@ def is_answer_right(question, answer_num):
     return question.right_answer_index == answer_num
 
 def is_hints_available(hints):
-    return True
+    if hints.get_hints_count() > 0:
+        return True
+    else:
+        return False
