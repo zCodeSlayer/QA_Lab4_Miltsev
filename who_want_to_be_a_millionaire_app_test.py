@@ -20,3 +20,8 @@ class Test_Game_Process(unittest.TestCase):
         result = is_answer_right(Question('1234',
                     ['1', '2', '3', '4'], 1), 1)
         self.assertEqual(result, True)
+
+    def test_is_answer_false(self):
+        result = is_answer_right(Question('1234',
+                    ['1', '2', '3', '4'], 1), 3)
+        self.assertEqual(result, False)
