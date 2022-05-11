@@ -33,27 +33,27 @@ class Test_Game_Process(unittest.TestCase):
 
     def test_is_hints_available_with_use_one_hint(self):
         hints = Hints()
-        hints.use_hint_50_50(Question('1234',
-                    ['1', '2', '3', '4'], 1))
+        hints.use_hint(0, Question('1234',
+                                ['1', '2', '3', '4'], 1))
         result = is_hints_available(hints)
         self.assertEqual(result, True)
 
     def test_is_hints_available_with_two_hints(self):
         hints = Hints()
-        hints.use_hint_50_50(Question('1234',
-                    ['1', '2', '3', '4'], 1))
-        hints.use_hint_call_friend(Question('1234',
-                                      ['1', '2', '3', '4'], 1))
+        hints.use_hint(0, Question('1234',
+                                   ['1', '2', '3', '4'], 1))
+        hints.use_hint(0, Question('1234',
+                                   ['1', '2', '3', '4'], 1))
         result = is_hints_available(hints)
         self.assertEqual(result, True)
 
     def test_is_hints_available_with_three_hints(self):
         hints = Hints()
-        hints.use_hint_50_50(Question('1234',
-                    ['1', '2', '3', '4'], 1))
-        hints.use_hint_call_friend(Question('1234',
-                                      ['1', '2', '3', '4'], 1))
-        hints.use_hint_hall_help(Question('1234',
-                                            ['1', '2', '3', '4'], 1))
+        hints.use_hint(0, Question('1234',
+                                   ['1', '2', '3', '4'], 1))
+        hints.use_hint(0, Question('1234',
+                                   ['1', '2', '3', '4'], 1))
+        hints.use_hint(0, Question('1234',
+                                   ['1', '2', '3', '4'], 1))
         result = is_hints_available(hints)
         self.assertEqual(result, False)
