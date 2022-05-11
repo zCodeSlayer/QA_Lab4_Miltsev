@@ -1,5 +1,7 @@
 import unittest
-from who_want_to_be_a_millionaire_app import up_bank
+from hints_controll import Hints
+from question import Question
+from who_want_to_be_a_millionaire_app import up_bank, game_logic
 
 class Test_Game_Process(unittest.TestCase):
     def test_bank(self):
@@ -13,3 +15,9 @@ class Test_Game_Process(unittest.TestCase):
     def test_bank_1000_to_2000(self):
         new_bank = up_bank(1000)
         self.assertEqual(new_bank, 2000)
+
+    def test_game_logic(self):
+        question_list = list()
+        hints = Hints()
+        result = game_logic(question_list, hints)
+        self.assertEqual(result, True)
