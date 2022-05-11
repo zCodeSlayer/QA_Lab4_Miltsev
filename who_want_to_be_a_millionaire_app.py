@@ -3,3 +3,6 @@ def up_bank(old_bank):
 
 def is_answer_right(question, answer_num):
     return question.right_answer_index == answer_num
+
+def is_hints_available(hints):
+    return True
